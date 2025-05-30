@@ -1,0 +1,14 @@
+name: "hola mucodigofacilitondo"
+
+on:
+  push:
+    branches: ["main"]
+
+    jobs:
+      deploy-codigofacilito:
+        runs-on: ubuntu-latest
+        steps:
+          run: echo "Hacemospull del codigo"
+          run: echo "correr migracions"
+          run: echo "generar binario"
+          run: echo "publicar version"
