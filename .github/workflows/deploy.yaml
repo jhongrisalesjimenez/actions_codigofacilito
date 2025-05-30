@@ -7,7 +7,7 @@ on:
 jobs:
   deploy-codigofacilito:
     runs-on: ubuntu-latest
-    steps:
+    step:
       run: echo "Hacemospull del codigo"
       run: echo "correr migracions"
       run: echo "generar binario"
