@@ -6,15 +6,13 @@ jobs:
   first_jobs:
     runs-on: ubuntu-latest
 
+    env:
+      name: CodigoFacilito
+
     steps:
       - name: working dir
-        run: ls -al
+        run: echo $GITHUB_OUTPUT
       
-      - name: action
-        uses: actions/checkout@v4
-
-      - name: working dir after action
-        run: ls -al
 
   second_jobs:
     if: ${{github.ref == 'refs/heads/yaml'}}
