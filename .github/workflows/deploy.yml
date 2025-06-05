@@ -11,7 +11,11 @@ jobs:
 
     steps:
       - name: working dir
-        run: echo $GITHUB_OUTPUT
+        id: step_1
+        run: echo "my_variable=Hola Mundo" >> $GITHUB_OUTPUT
+
+      - name: obtener mensaje
+        run: echo "${{ steps.step_1.outputs.my_variable }}"
       
 
   second_jobs:
