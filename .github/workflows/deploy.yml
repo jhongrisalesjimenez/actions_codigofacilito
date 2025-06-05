@@ -7,9 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hola Mundo
-        run: echo "Hola Mundo"
-  
+      - name: working dir
+        run: ls -al
+      
+      - name: action
+        uses: actions/checkout@v4
+
+      - name: working dir after action
+        run: ls -al
+
   second_jobs:
     if: ${{github.ref == 'refs/heads/yaml'}}
     needs: first_jobs
